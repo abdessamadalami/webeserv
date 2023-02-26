@@ -35,11 +35,11 @@ int main(int argc, char* argv[]) {
       int result = std::system("git add .");
        result = std::system(git_command.c_str());
       result = std::system("git push");
-      if (result != 0) {
+      exit(0);
+      if (result != 0)
         std::cerr << "Error: Failed to commit changes\n";
     std::cout << "Commit successful: " << message << "\n";
-  exit(0);
-   }
+  
   }
   commit_file.close();
   out.close();
