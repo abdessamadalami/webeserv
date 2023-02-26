@@ -33,15 +33,14 @@ int main(int argc, char* argv[]) {
     std::string git_command = "git commit --date=\"" +  timestamp + "\" -m " + message;
     std::cout << git_command << std::endl;
       int result = std::system("git add .");
-       result = std::system(git_command.c_str());
-       
-      result = std::system("git push");
+      result = std::system(git_command.c_str());
+      
       if (result != 0)
         std::cerr << "Error: Failed to commit changes\n";
     std::cout << "Commit successful: " << message << "\n";
   
   }
-  
+
   commit_file.close();
   out.close();
   return 0;
