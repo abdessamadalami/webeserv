@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
       if (result != 0)
         std::cerr << "Error: Failed to commit changes\n";
     std::cout << "Commit successful: " << message << "\n";
-    exit(0);
+ 
   }
   
   commit_file.close();
