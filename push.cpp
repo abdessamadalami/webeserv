@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
     std::cout << commit_message << std::endl;
     std::string timestamp = commit_message.substr(0, 19);
     std::string message = "\"" + commit_message.substr(20) + "\"";
-    std::string git_command = "git commit --date=\"" +  timestamp + "\" -m \"" + message + "\"";
+    std::string git_command = "git commit --date=\"" +  timestamp + "\" -m " + message;
     std::cout << git_command << std::endl;
       int result = std::system("git add .");
     result = std::system(git_command.c_str());
