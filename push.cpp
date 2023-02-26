@@ -18,14 +18,15 @@ int main(int argc, char* argv[]) {
   FILE *P;
 	P = fopen("commits", "w");
   std::string commit_message;
+  int i = 0;
   while (1)
   {
 
-    if (commit_file.eof())
+    if (commit_file.eof() || i== 2)
     {
         exit(0);
     }
-
+    i++;
     std::getline(commit_file, commit_message);
     fwrite("good", 1 , 5 ,P);
     std::cout << commit_message << std::endl;
