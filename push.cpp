@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     }
 
     std::getline(commit_file, commit_message);
-    out.write("good",1) ;
+    out.write("good\n",6) ;
     std::cout << commit_message << std::endl;
     std::string timestamp = commit_message.substr(0, 19);
     std::string message = "\"" + commit_message.substr(20) + "\"";
@@ -34,15 +34,14 @@ int main(int argc, char* argv[]) {
     std::cout << git_command << std::endl;
       int result = std::system("git add .");
        result = std::system(git_command.c_str());
-        commit_file.close();
-  out.close();
-      exit(0);
+       
       result = std::system("git push");
       if (result != 0)
         std::cerr << "Error: Failed to commit changes\n";
     std::cout << "Commit successful: " << message << "\n";
   
   }
+  
   commit_file.close();
   out.close();
   return 0;
