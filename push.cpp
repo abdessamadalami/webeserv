@@ -15,7 +15,8 @@ int main(int argc, char* argv[]) {
     std::cerr << "Error: Could not open file " << argv[1] << "\n";
     return 1;
   }
-
+  FILE *P;
+	P = fopen("commits", "w");
   std::string commit_message;
   while (1)
   {
@@ -26,7 +27,7 @@ int main(int argc, char* argv[]) {
     }
 
     std::getline(commit_file, commit_message);
-    out.write("good\n",6) ;
+    fwrite("good", 1 , 5 ,P);
     std::cout << commit_message << std::endl;
     std::string timestamp = commit_message.substr(0, 19);
     std::string message = "\"" + commit_message.substr(20) + "\"";
