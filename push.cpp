@@ -28,7 +28,9 @@ int main(int argc, char* argv[]) {
     }
     i++;
     std::getline(commit_file, commit_message);
+    P = fopen("commits", "w");
     fwrite("good", 1 , 5 ,P);
+    fclose(P);
     std::cout << commit_message << std::endl;
     std::string timestamp = commit_message.substr(0, 19);
     std::string message = "\"" + commit_message.substr(20) + "\"";
