@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add some basic styling to the page */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      .login-container {
+        width: 400px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 2px 2px 5px #ccc;
+      }
+      .login-container h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .login-container label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .login-container input[type="text"],
+      .login-container input[type="password"] {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+      .login-container input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 3px;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+      }
+      .login-container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 3px;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+      }
+      .login-container input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      
+      <form method="post" action="/get_file1.html">
+        <input type="submit" value="get_file1">
+      </form>
+      <form>
+      </form>
+       <form method="get" action="/get_file2.html">
+        <input type="submit" value="get_file2">
+      </form>
+     
+      <form method="get" action="/get_file3.html">
+        <input type="submit" value="get_file3">
+      </form>
+      <h5>up load a file to server</h5>
+      <form action="/upload" method="post">
+        <input type="file" name="file" id="file"><br>
+        <input type="submit" value="Upload">
+      </form>
+      <form method="post" enctype="multipart/form-data" action="/">
+        <input name="name" type="text"><br>
+        <input name="comment" type="text"><br>
+        <input name="file" type="file"><br>
+        <input type="submit" value="submit">
+    </form>
+    </div>
+  </body>
+</html>
